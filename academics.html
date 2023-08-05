@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>Academics - Shawn's Portfolio</title>
+    <link rel="stylesheet" href="thirdprogram.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  </head>
+<center>
+    <header>
+    <a href="index.html">Shawn's Portfolio</a>
+    <img class="icon" src="media/Shawn Thomas square.jpg" alt="Icon">
+    </header>
+</center>
+  <div class="navbar">
+    <a href="academics.html">Academics</a>
+    <a href="culturals.html">Culturals</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+
+  <body>
+    <div class="hero">
+      <h1>My Academic Achievements</h1>
+      <p>Check out some of my academic achievements below.</p>
+    </div>
+
+    <div class="achievements">
+      <div class="ach achievement1">
+        <h2>GRADE 12</h2>
+        <p>I have completed my Grade 12 studies and has graduated from Indian School Darsait (CBSE Syllabus) Muscat, Oman securing 94%.
+        </p>
+      </div>
+
+        <div class="ach achievement2">
+          <h2>BCA GRADUATE</h2>
+          <p>I am a BCA graduate from Kristu Jayanti College (Autonomous) having secured 78%. I've learnt various IT related concepts, Coding languages and more. </p>
+        </div>
+    
+      <div class="ach achievement3">
+        <h2>RESEARCH PAPER</h2>
+        <p>Me and my 3-man team has published a resarch paper on "Cybernetic companions using machine learning with python" under the guidance of Dr. Kalaiselvi K. on the Tamil Nadu Rsearch and Scientific Organization (IJONS/VOL-13/ISSUE 76/ FEBRUARY/ 2023/ Page no. 803) 
+          <br><br>
+          We have used Various concepts such as MFCC to understand frequency of voice and SVM (Support Vector machines) for classification of data as well as a dataset from Kaggle.
+        </p>
+      </div>
+
+      <div class="ach achievement4">
+        <h2>PROJECTS AND INTERNSHIPS </h2>
+        <br>
+        <h4><i>Projects</i></h4>
+        <ul>
+          <li>Student Study Portal using Python and Django</li>
+          <li>LMS using ASP.net</li>
+        </ul>
+        <br>
+        <h4><i>Internships</i></h4>
+        <ul>
+          <li>My Captain - Student Ambassador</li>
+          <li>FUGIT - Website Hosting and Content providing.</li>
+        </ul>
+      </div>
+    </div>
+    <button id="goToTopBtn" class="go-to-top-btn" onclick="goToTop()">Go to Top</button>
+
+    <footer>
+      <p>&copy; SHAWN BIJU THOMAS - PERSONAL PORTFOLIO</p>
+      <br>
+    </footer>
+
+    <script>
+      function goToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+      }
+      
+      window.onscroll = function() {
+        scrollFunction();
+      };
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("goToTopBtn").style.display = "block";
+        } else {
+          document.getElementById("goToTopBtn").style.display = "none";
+        }
+      }
+        window.onscroll = function() {
+    var scrollTop = window.scrollY;
+    var items = document.querySelectorAll('.ach');
+
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      var itemTop = item.getBoundingClientRect().top;
+
+      if (itemTop < scrollTop) {
+        item.style.visibility = 'visible';
+        item.style.opacity = 1;
+      }
+    }
+  };
+
+window.onscroll = function() {
+  var scrollTop = window.scrollY;
+  var items = document.querySelectorAll('.ach');
+
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    var itemTop = item.getBoundingClientRect().top;
+
+    if (itemTop < scrollTop) {
+      item.style.visibility = 'visible';
+      item.style.opacity = 1;
+    } else {
+      item.style.opacity = 0;
+      setTimeout(function() {
+        item.style.visibility = 'hidden';
+      }, 0.500000);
+    }
+  }
+};
+  
+
+      </script>
+      
+    </body>
+</html>
